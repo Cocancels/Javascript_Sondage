@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin: auto;
+    padding-right: 10%;
+    background-color: rgb(251, 251, 168);
+    z-index: 2000;
+}
+
+#burger-icon{
+    max-width: 50px;
+}
+
+#burger-icon:hover{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav>a>p{
+    padding-top: 20px;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(22, 22, 22);
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+
+}
+
+nav>a>p:hover{
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: rgb(22, 22, 22);
+    color: rgb(251, 251, 168);
+}
+
+.explications-title{
+    z-index: 2;
+}
+
+#explications{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 150px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-bottom: 150px;
+}
+
+.image-famille{
+    max-height: 350px;
+    margin-right: 50px;
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+#explications>img:hover{
+    transform: rotate(-5deg)
+}
+
+#explications-content{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    font-family: 'Montserrat';
+    color: rgb(22, 22, 22);
+}
+
+#explications-content>h1{
+    display: inline-block;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+    border-bottom: solid 0.5px rgb(22, 22, 22) ;
+    margin-bottom: 20px;
+}
+
+.br{
+    margin-top: 20px;
+}
+
+#explications-content>p{
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.explications-p{
+    margin-bottom: 20px;
+}
+
+#section-2{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgb(251, 251, 168);
+}
+
+#sondages{
+    text-align: center;
+}
+
+.sondages-title{
+    display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 150px;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    border-top: 1px solid rgb(22, 22, 22);
+}
+
+
+#sondages-fiches{
+    margin-top: 60px;
+    font-family: 'Montserrat';
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+
+.sondages-fiches-content{
+    color: white;
+    text-align: center;
+    background-color: rgb(22, 22, 22) ;
+    padding-top: 30px;
+    max-width: 300px;
+    border-radius: 20px;
+}
+
+.sondages-fiches-content>a{
+    display: inline-block;
+    color: rgb(22, 22, 22);
+    margin-top: 40px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    transition-property: color, background-color ;
+    transition-duration: 0.5s;
+    margin-bottom: 30px;
+}
+
+
+.sondages-fiches-content>a:hover{
+    color: white;
+    background-color:green;
+    
+}
+
+.sondages-fiches-content>p{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+
+.logo-sondage{
+    max-width: 100%;
+    max-height: 300px;
+}
+
+#center{
+    text-align: center;
+}
+
+#see-more{
+    display: inline-block;
+    margin-top: 100px;
+    flex-wrap: nowrap;
+    background-color:  rgb(22, 22, 22);
+    border-radius: 15px;
+}
+
+.see-more-content{
+    display: inline-block;
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    padding: 30px;
+    align-self: center;
+}
+
+#see-more>img{
+    margin-left: 10px;
+    max-width: 30px;
+    color: white;
+}
+
+
+footer{
+    background-color: rgb(31, 29, 29);
+}
+
+#footer-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-p{
+    font-family: 'Montserrat';
+    color:white;
+    margin-left: 20px;
+    align-self: center;
+    
+}
+
+#footer-content>img{
+    max-width: 100px;
+}
+
+#footer-content:nth-child(2){
+    justify-content: flex-end;
+}
+
+
+@media screen and (max-width: 640px) {
+    #burger-icon{
+        display: block;
+        margin: auto;
+        max-width: 50px;
+    }
+
+    nav {
+      display: block;
+      text-align: center;
+      padding: 0;  
+    }
+
+    nav>a{
+        text-align: center;
+        display: block;
+    }
+
+    #explications{
+        flex-direction: column;
+    }
+
+    .image-famille{
+        display: block;
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+
+    .sondages-title{
+        padding-bottom: 0;
+    }
+
+    #sondages-fiches{
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        margin-right: 0;
+    }
+
+    .sondages-fiches-content{
+        margin-top: 100px;
+    }
+
+    #footer-content>p{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+        order: -1;
+    }
+
+    nav>a{
+        display: none;
+    }
+
+  }

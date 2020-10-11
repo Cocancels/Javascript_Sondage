@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin: auto;
+    padding-right: 10%;
+    background-color: rgb(251, 251, 168);
+    z-index: 2000;
+
+}
+
+#burger-icon{
+    max-width: 50px;
+}
+
+#burger-icon:hover{
+    cursor: pointer;
+}
+
+nav>a{
+    padding-top: 20px;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(22, 22, 22);
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+    text-decoration: none;
+
+}
+
+nav>a:hover{
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: rgb(22, 22, 22);
+    color: rgb(251, 251, 168);
+}
+
+#resultats-title{
+    text-align: center;
+    padding-top: 130px;
+}
+
+#resultats-title>h1{
+    font-size: 40px;
+    padding-bottom: 50px;
+    display: inline-block;
+    border-bottom: 0.5px solid rgb(22, 22, 22);
+}
+
+#podium{
+    margin-top: 100px;
+}
+
+#podium-1{
+    text-align: center;
+}
+
+#podium-line{
+    display: flex;
+    justify-content: space-around;
+}
+
+#podium-2, #podium-3{
+    text-align: center;
+}
+
+#podium-1>h2{
+    color: rgb(235, 220, 22);
+    font-size: 40px;
+}
+
+#podium-2>h2{
+    color: rgb(168, 168, 168);
+    font-size: 30px;
+}
+
+#podium-3>h2{
+    color: rgb(143, 84, 17);
+    font-size: 20px;
+}
+
+#podium-1>p, #podium-2>p, #podium-3>p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#podium-1>p{
+    font-size: 30px;
+}
+
+#podium-2>p{
+    font-size: 25px;
+}
+
+#podium-3>p{
+    font-size: 20px;
+}
+
+.medaille{
+    max-height: 200px;
+    text-align: center;
+    animation: 5s linear Balance infinite
+
+}
+
+#congrats{
+    text-align: center;
+    margin-top: 150px;
+}
+
+#congrats>p{
+    font-size: 50px;
+    margin-bottom: 70px;
+    animation-name: AutoSlide;
+    animation-duration: 1s ;
+    animation-iteration-count: infinite;
+    
+}
+
+#inline{
+    display: inline;
+}
+
+#congrats>a{
+    display: inline-block;
+    font-size: 20px;
+    padding: 15px;
+    color: white;
+    background-color: rgb(22, 22, 22);
+    text-decoration: none;
+    border-radius: 10px;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+}
+
+
+#congrats>a:hover{
+    background-color: green;
+    color: white;
+
+}
+
+footer{
+    margin-top: 100px;
+    background-color: rgb(31, 29, 29);
+}
+
+#footer-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-p{
+    font-family: 'Montserrat';
+    color: white;
+    margin-left: 20px;
+    align-self: center;
+    
+}
+
+#footer-content>img{
+    max-width: 100px;
+}
+
+#footer-content:nth-child(2){
+    justify-content: flex-end;
+}
+
+
+
+
+
+
+@media screen and (max-width: 640px) {
+    #burger-icon{
+        display: block;
+        margin: auto;
+        max-width: 50px;
+    }
+
+    nav {
+      display: block;
+      text-align: center;
+      padding: 0;  
+    }
+
+    nav>a{
+        text-align: center;
+        display: none;
+    }
+
+    #podium{
+        text-align: center;
+    }
+
+    #podium-1, #podium-2, #podium-3{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #podium-line{
+        flex-direction: column;
+    }
+
+    #podium-2, #podium-3{
+        margin-top: 100px;
+    }
+
+    #footer-content>p{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+        order: -1;
+    }
+
+  }
+
+  @keyframes AutoSlide {
+	0% {
+        font-size: 70px;
+    }
+
+    50%{
+        font-size: 75px;
+    }
+
+    100%{
+        font-size: 70px;
+    }
+  }
+
+    @keyframes Balance {
+    
+        25%{
+            transform: rotate(-45deg)
+        }
+
+        75%{
+            transform: rotate(45deg)
+        }
+}
